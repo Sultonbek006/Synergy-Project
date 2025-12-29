@@ -29,3 +29,8 @@ dist-ssr
 
 # Database
 sql_app.db
+
+# Spreadsheets and Data
+*.xlsx
+*.xls
+*.csv
