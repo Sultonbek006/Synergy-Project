@@ -1,0 +1,88 @@
+{
+    "name": "Synergy Platform",
+    "version": "1.0.0",
+    "description": "Pharmaceutical Reconciliation System",
+    "indexed_at": "2025-12-27T15:33:05+05:00",
+    "files_indexed": 22,
+    "companies": [
+        "Synergy",
+        "Amare",
+        "Galassiya",
+        "Perfetto"
+    ],
+    "stack": {
+        "frontend": {
+            "framework": "React 19",
+            "language": "TypeScript",
+            "build": "Vite 6",
+            "port": 3000
+        },
+        "backend": {
+            "framework": "FastAPI",
+            "language": "Python",
+            "database": "SQLite",
+            "orm": "SQLAlchemy",
+            "port": 8000
+        },
+        "ai": {
+            "provider": "Google Gemini",
+            "model": "gemini-2.5-flash",
+            "purpose": "Receipt OCR and forensic verification"
+        }
+    },
+    "structure": {
+        "backend": {
+            "main.py": "FastAPI routes (893 lines)",
+            "models.py": "SQLAlchemy models (64 lines)",
+            "auth.py": "JWT authentication (100 lines)",
+            "services.py": "Excel parser (325 lines)",
+            "database.py": "DB connection (21 lines)"
+        },
+        "components": {
+            "AdminDashboard.tsx": "Admin control center (987 lines)",
+            "ManagerDashboard.tsx": "Manager work view (433 lines)",
+            "LoginPage.tsx": "Auth form (144 lines)",
+            "Sidebar.tsx": "Navigation (131 lines)",
+            "StatsCard.tsx": "Metric card (reusable)",
+            "LanguageSwitcher.tsx": "Locale selector"
+        },
+        "services": {
+            "api.ts": "HTTP client (169 lines)",
+            "authService.ts": "Auth operations (104 lines)",
+            "dataService.ts": "Data operations (265 lines)",
+            "i18n.ts": "Translations (346 lines)"
+        }
+    },
+    "api_endpoints": {
+        "auth": [
+            "/token",
+            "/users/me"
+        ],
+        "manager": [
+            "/manager/doctors",
+            "/manager/verify"
+        ],
+        "admin": [
+            "/admin/stats",
+            "/admin/users",
+            "/admin/data",
+            "/admin/leaderboard",
+            "/admin/upload-plan",
+            "/admin/update-payment/{id}"
+        ],
+        "health": [
+            "/",
+            "/health"
+        ]
+    },
+    "database_tables": [
+        "users",
+        "master_plan",
+        "payments"
+    ],
+    "languages_supported": [
+        "en",
+        "ru",
+        "uz"
+    ]
+}
